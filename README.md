@@ -4,4 +4,4 @@
 
 See YouTube video: https://youtu.be/x9-wbo-2Rk8
 
-Note, this shaders smashes 2 shaders together.  Altough it looks and rendersok, it still needs some refactoring and cleanup.
+Note, this shaders smashes 2 shaders together.  Altough it may look and render ok, it still needs some refactoring and cleanup.
