@@ -6,4 +6,4 @@ See YouTube video: https://youtu.be/x9-wbo-2Rk8
 
 Note, this shaders smashes 2 shaders together.  Altough it may look and render ok, it still needs some refactoring and cleanup.
 
-Only works in Godot 4.3.  Still needs to be updated to work in Godot 4.4.
+Works on Godot 4.5 (Beta 4).
