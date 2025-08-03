@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode cull_disabled, world_vertex_coords, depth_draw_always, ambient_light_disabled, diffuse_burley;
 
-uniform float sync_time;
+//uniform float sync_time;
 varying vec3 triplanar_pos;
 uniform float wave_speed = 0.05; // the speed of the vertex waves
 uniform float edge_fade_power = 2.0; // controls the contrast on the opacity fading when objects are on the surface
@@ -94,6 +94,8 @@ vec2 g_uv(vec2 uv, float speed, bool flipped, vec3 n) {
 }
 
 vec2 g_v(vec2 v, vec3 n, bool flipped){
+	//float sync_time = TIME;
+	float sync_time = 0.0;
 	float f_v_n_t = float(v_noise_tile);
 
 	v.x = mod(v.x, f_v_n_t);
@@ -191,7 +193,7 @@ void fragment() {
 
 	NORMAL_MAP = mix(n_map1, n_map2, 0.5);
 
-	if(!FRONT_FACING) {
+	if(FRONT_FACING) {
 		vec3 under = texture(screen_texture, SCREEN_UV).rgb;
 		_albedo = mix(under, deep, alpha_blend);
 		float _ALPHA = remap(0.0, opacity, opacity_floor, opacity_ceiling, pow(alpha_blend, edge_fade_power));

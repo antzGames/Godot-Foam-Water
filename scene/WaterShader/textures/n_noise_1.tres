@@ -13,8 +13,8 @@ domain_warp_amplitude = 4.62
 [resource]
 width = 256
 height = 256
-seamless = true
-seamless_blend_skirt = 0.251
-as_normal_map = true
-color_ramp = SubResource("Gradient_jdhqh")
 noise = SubResource("FastNoiseLite_pbnoc")
+color_ramp = SubResource("Gradient_jdhqh")
+seamless = true
+as_normal_map = true
+seamless_blend_skirt = 0.251
